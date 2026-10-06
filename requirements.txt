@@ -1,0 +1,4 @@
+numpy>=1.26
+opencv-python>=4.9
+PySide6-Essentials>=6.6
+pygrabber>=0.2

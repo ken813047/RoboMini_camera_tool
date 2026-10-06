@@ -1,0 +1,5 @@
+# bat 檔在 Windows 上一定要是 CRLF 換行，不然 cmd 可能跳錯行
+*.bat text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
