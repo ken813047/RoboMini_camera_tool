@@ -6,12 +6,13 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONFIG_DIR = PROJECT_ROOT / "config"
 SETTINGS_FILE = CONFIG_DIR / "settings.json"
+# 命令列 preview / snap 的預設照片資料夾。每次依專案位置計算、不存進設定檔，搬移資料夾也不會指到舊路徑
+DEFAULT_PIC_FOLDER = PROJECT_ROOT / "captures"
 
 DEFAULTS = {
     "resolution": [640, 480],          # [0, 0] = 使用相機預設；一個 Hub 接多台時建議 640x480
     "mjpg": True,
     "exclude_names": ["HD Webcam"],    # 不自動開啟的相機（名稱完全相同才排除，不分大小寫）
-    "pic_folder": str(PROJECT_ROOT / "captures"),  # 命令列 preview / snap 用
 }
 
 
