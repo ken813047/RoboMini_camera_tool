@@ -13,7 +13,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import __version__, devices
-from .config import load_settings
+from .config import DEFAULT_PIC_FOLDER, load_settings
 
 
 def cmd_list(args):
@@ -159,7 +159,7 @@ def _add_cam_args(p, default_out):
 
 
 def main(argv=None):
-    default_out = load_settings()["pic_folder"]
+    default_out = str(DEFAULT_PIC_FOLDER)
     parser = argparse.ArgumentParser(prog="stereocam", description="雙目 USB 相機工具")
     parser.add_argument("--version", action="version", version=__version__)
     sub = parser.add_subparsers(dest="cmd")
